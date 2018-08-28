@@ -1,0 +1,100 @@
+﻿<Window x:Class="task04_calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:task04_calc"
+        xmlns:viewModel="using:task04_calc"
+        mc:Ignorable="d"
+        Title="Калькулятор" MinHeight="696.375" MinWidth="800" Height="696.375" Width="800">
+    <!--<Page.Resources>-->
+    <!--<local:MainViewModel x:Key="viewModelSource"/>-->
+    <!--</Page.Resources>-->
+    <Grid Name="MainGrid" Background="PapayaWhip" Margin="0">
+        <StackPanel VerticalAlignment="Top" Margin="0,0,0,629" Orientation="Horizontal" MinHeight="28" >
+            <Menu  x:Name="M1" IsMainMenu="True" VerticalAlignment="Stretch"   >
+                <MenuItem MinHeight="28" VerticalAlignment="Stretch" BorderBrush="BlanchedAlmond" Background="White" Width="109" >
+                    <MenuItem.Header>
+                        <StackPanel  Margin="1" Orientation="Horizontal" >
+                            <Ellipse  Height="8" Width="8" Fill="Aqua"/>
+                            <TextBlock Padding="4" ><Run Text="File"/></TextBlock>
+                        </StackPanel>
+                    </MenuItem.Header>
+
+                    <MenuItem Header="Open" Background="White"  >
+
+                        <Button Background="White" Content="..." />
+                        <TextBox BorderBrush="BlanchedAlmond" Width="200" />
+                    </MenuItem>
+                    <MenuItem Header="Exit" Background="White" Click="MenuItem_Click_1"/>
+                </MenuItem>
+                <MenuItem VerticalAlignment="Stretch" Header="_About" BorderBrush="BlanchedAlmond" Background="White" Width="109" >
+                    <MenuItem Header="Open" Background="White" Width="108"  >
+                        <Button Background="White" Content="..." />
+                        <TextBox Width="200" />
+                    </MenuItem>
+                    <MenuItem Header="_Exit"  Background="White" Width="108" Click="MenuItem_Click_1"/>
+                </MenuItem>
+                <MenuItem VerticalAlignment="Stretch" Header="Level_0" BorderBrush="BlanchedAlmond" Background="White"  Width="108" />
+
+            </Menu>
+        </StackPanel>
+        <!--<TextBox  Name="TBox1" Margin="232,115,248,0" Height="37" TextAlignment="Right" FontSize="20" Text="Вычисление" Foreground="DarkGray"  VerticalAlignment="Top" GotFocus="TBox1_GotFocus"/>-->
+        <!--<WrapPanel Margin="352,262,77,82" >
+          
+        </WrapPanel>-->
+        <Grid Name="gridbuttons" HorizontalAlignment="Stretch" MinHeight="285" MinWidth="321"  Margin="63,244,334.333,135.333" VerticalAlignment="Stretch"  RenderTransformOrigin="0.5,0.5" ShowGridLines="True" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" MinHeight="65"/>
+                <RowDefinition Height="*" MinHeight="65"/>
+                <RowDefinition Height="*" MinHeight="65"/>
+                <RowDefinition Height="*" MinHeight="65"/>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+                <ColumnDefinition Width="*" MinWidth="65"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Separator Background="Gray"   HorizontalAlignment="Left" Height="2" Margin="4,7,0,0" VerticalAlignment="Top" Width="322" RenderTransformOrigin="0.5,0.5" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" >
+                <Separator.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Separator.RenderTransform>
+            </Separator>
+        </Grid>
+        <RichTextBox Name="Rbox1" HorizontalAlignment="Right" Height="82" Margin="0,244,73.333,0" Width="188" VerticalAlignment="Top">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ListBox Name="Lbox1" HorizontalAlignment="Right" Height="99" Margin="0,352,75.333,0" VerticalAlignment="Top" Width="184"/>
+        <ListView Name="Lview1" HorizontalAlignment="Right" Height="100" Margin="0,479,75.333,0" VerticalAlignment="Top" Width="179">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Name="Lbl1" HorizontalAlignment="Left" Margin="232,115,248,0" Height="37"  VerticalAlignment="Top"  FontSize="25" Content="0" HorizontalContentAlignment="Right" Width="286"/>
+        <TextBlock HorizontalAlignment="Left" Margin="539,584,0,0" TextWrapping="Wrap" Text="{Binding Accumulator, Mode=TwoWay}" VerticalAlignment="Top" Height="50" Width="181"/>
+    </Grid>
+
+</Window>
