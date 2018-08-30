@@ -260,7 +260,7 @@ namespace task04_calc
         //}
         public string Prop { get; set; }
 
-
+        public event EventHandler ClicksOnButtonsEvent;
     }
 
 

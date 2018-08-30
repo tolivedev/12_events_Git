@@ -1,2 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="task04_calc.Model">
+    <Position X="8.5" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAAAAAAAAAAAAQAAAAACAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="task04_calc.Presenter">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presenter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="task04_calc.MainWindow">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQSAAgEAAAAAAAAACAAAAEAAAECCAABGAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.21" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
