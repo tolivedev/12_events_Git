@@ -25,8 +25,8 @@ namespace task03
     {
         // сами события на вьюхе
         public event EventHandler Start;
-
         public event EventHandler Reset;
+
         // поля
         public Timer timer1;
         public MainWindow()

@@ -13,13 +13,11 @@ namespace task04_calc
         private bool _isFirstDigit = true;
         private object content = null;
 
-        private double accumulator = 0;
-        private int operationNumber = 0;
-
         public double Accumulator
         {
-            get { return accumulator; }
-            set { accumulator = value; }
+            get => default;
+            set
+            { }
         }
 
         public bool IsFirstDigit
@@ -37,8 +35,9 @@ namespace task04_calc
 
         public int OperationNumber
         {
-            get { return operationNumber; }
-            set { operationNumber = value; }
+            get => default;
+            set
+            { }
         }
         public object Content
         {
@@ -175,7 +174,7 @@ namespace task04_calc
 
             }
 
-            
+            return this.Content;
         }
     }
 }

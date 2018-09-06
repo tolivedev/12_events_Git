@@ -47,11 +47,11 @@ namespace task04_calc
             }
         }
 
-        //private double accumulator = 0;
-        //private int operationNumber = 0;
+        private double accumulator = 0;
+        private int operationNumber = 0;
 
-        //private bool iSnextOperation = false;
-        //private bool iSfirstDigit = true;
+        private bool iSnextOperation = false;
+        private bool iSfirstDigit = true;
 
         //public double Accumulator { get; set; }
 

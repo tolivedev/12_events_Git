@@ -47,7 +47,7 @@ namespace task04_calc
         private void ClicksOnButtons(object sender, EventArgs e)
         {
             model.ParseOfbuttons(sender, e);
-            view.Lbl1.Content = model.Content;
+            view.Content = model.Content;
         }
     }
 }

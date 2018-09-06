@@ -3,7 +3,7 @@
   <Class Name="task04_calc.Model">
     <Position X="5" Y="5.25" Width="3" />
     <TypeIdentifier>
-      <HashCode>AEQSAAAEAgAAAAAAAAAQAAEAACAAAAAAAAAIAAAAAAA=</HashCode>
+      <HashCode>AEQAAAAAAgAAAAAAAAAQAAAAACAEAAAAAAAIAAAAAAA=</HashCode>
       <FileName>Model.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,7 +21,7 @@
   <Class Name="task04_calc.MainWindow">
     <Position X="1" Y="1.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAACAAAAAAAAAAAEAAAECCAAAOAAAAAAAAAA=</HashCode>
+      <HashCode>AAASAAgEAACAAAAAACAAAAEAAAECCAAAOAAAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
