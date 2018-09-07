@@ -35,19 +35,19 @@ namespace task04_calc
         public MainWindow MainWindow
         {
             get => default;
-            set{}
+            set { }
         }
 
         internal Model Model
         {
             get => default;
-            set{}
+            set { }
         }
 
-        private void ClicksOnButtons(object sender, EventArgs e)
+        private void ClicksOnButtons(object sender, EventArgs e) //метод сообщённый с обработчиком
         {
-            model.ParseOfbuttons(sender, e);
-            view.Lbl1.Content = model.Content;
+            view.Lbl1.Content = model.ParseOfbuttons(sender, e);
+            //= model.Content;
         }
     }
 }

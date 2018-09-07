@@ -10,47 +10,20 @@ namespace task04_calc
 {
     class Model
     {
-        private bool _isFirstDigit = true;
-        private object content = null;
-
-        private double accumulator = 0;
         private int operationNumber = 0;
 
-        public double Accumulator
-        {
-            get { return accumulator; }
-            set { accumulator = value; }
-        }
+        public double Accumulator { get; set; } = 0;
+        public int OperationNumber { get; set; } = 0;
+        public bool IsFirstDigit { get; set; } = true;
 
-        public bool IsFirstDigit
-        {
-            get { return _isFirstDigit; }
-            set { _isFirstDigit = value; }
-        }
+        public bool IsNextOperation { get; set; } = false;
 
-        public bool IsNextOperation
-        {
-            get => default;
-            set
-            { }
-        }
-
-        public int OperationNumber
-        {
-            get { return operationNumber; }
-            set { operationNumber = value; }
-        }
-        public object Content
-        {
-            get { return content; }
-            set { this.content = value; }
-        }
+        
+        public object Content { get; set; } = null;
 
         public object ParseOfbuttons(object sender, EventArgs e)
         {
-            //throw new System.NotImplementedException();
             var butn = (sender as Button);
-
 
             // ноль
             if (Convert.ToInt32(butn.Tag) == 0)
@@ -78,7 +51,7 @@ namespace task04_calc
             //1..9
             if (Convert.ToInt32(butn.Tag) > 0)
             {
-                if (IsFirstDigit)
+                if (IsFirstDigit)  // первое число в ряду?
                 {
                     Content = butn.Content;
                     IsFirstDigit = false; //больше не первое число в ряду. его так же можно считать уже вторым(следующим)
@@ -121,7 +94,7 @@ namespace task04_calc
 
                 double currentContentFromLabel = Convert.ToDouble(Content);
 
-                if (IsFirstDigit == false) //проверка следующего ввода на число
+                if (IsFirstDigit == false) // первое ли число в ряду?
                 {
                     IsNextOperation = false;
                     IsFirstDigit = true;
@@ -139,25 +112,21 @@ namespace task04_calc
                             }
                         case -3:
                             {
-
                                 Accumulator -= currentContentFromLabel;
                                 break;
                             }
                         case -4:
                             {
-
                                 Accumulator *= currentContentFromLabel;
                                 break;
                             }
                         case -5:
                             {
-
                                 Accumulator /= currentContentFromLabel;
                                 break;
                             }
                         case -6:
                             {
-
                                 Accumulator += currentContentFromLabel;
                                 break;
                             }
@@ -167,15 +136,13 @@ namespace task04_calc
                 else
                 {
                     Accumulator = currentContentFromLabel; //запоминаем первое число из поля
-
                 }
 
                 OperationNumber = Convert.ToInt32(butn.Tag); //запоминаем знак операции, ждём второе число/новый ввод клавиши
-                IsFirstDigit = true; //флаг на новое число
-
+                IsFirstDigit = true; //флаг о том, что след введённое число будет новым
             }
 
-            
+            return Content;
         }
     }
 }

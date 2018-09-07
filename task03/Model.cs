@@ -10,12 +10,12 @@ namespace task03
     {
         public int Sec { get; set; }
         public string TimefromField { get; set; }
-        private DateTime d2;
-        private int s;
+        //private DateTime d2;
+        //private int s;
 
         public Model()
         {
-            s = 0;
+            //s = 0;
             TimefromField = "00:00:00";
             //TimefromField = dateTime;
             //ParseToTime();

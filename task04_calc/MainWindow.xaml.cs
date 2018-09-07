@@ -47,13 +47,6 @@ namespace task04_calc
             }
         }
 
-        //private double accumulator = 0;
-        //private int operationNumber = 0;
-
-        //private bool iSnextOperation = false;
-        //private bool iSfirstDigit = true;
-
-        //public double Accumulator { get; set; }
 
         private Button bt;
 
@@ -132,10 +125,10 @@ namespace task04_calc
         }
 
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e) //обработчик кнопки с формы, в теле вызывает наш обработчик
         {
 
-            _clicksOnButtonsEvent.Invoke(sender, e);
+            _clicksOnButtonsEvent.Invoke(sender, e); // вызов сообщенных методов обработчиков
 
 
 
@@ -265,14 +258,6 @@ namespace task04_calc
 
             //}
             #endregion
-        }
-
-        internal Presenter Presenter
-        {
-            get => default;
-            set
-            {
-            }
         }
     }
 
